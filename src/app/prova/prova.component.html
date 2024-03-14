@@ -1,21 +1,124 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Sito Web </title>
-  </head>
-  <body>
-    <mat-toolbar>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <span>My Site is the best</span>
-        <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" >
-            <mat-icon >favorite</mat-icon> 
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon>share</mat-icon>
-        </button>
-    </mat-toolbar>
-  </body>
-</html>
+<!-- 
+if = condizione ? questo: : senno questo -->
+
+<!-- <mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>{{cane[0].nome}}</mat-card-title>
+        <mat-card-subtitle>{{cane[0].razza}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{cane[0].descrizione}}</p>
+        <p>cAIAIAIAIIA</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card> -->
+
+<!-- <button mat-button color="accent" [disabled]=isDisabled>Accent</button>
+
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="immagine1" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card> -->
+
+<p>
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Test API </span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>nome</mat-label>
+    <input
+      matInput
+      placeholder="E. andrea. Pizza"
+      [(ngModel)]="nome"
+      name="nome"
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>cognome</mat-label>
+    <input
+      matInput
+      placeholder="E. monico"
+      [(ngModel)]="cognome"
+      name="cognome"
+    />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    class="botton1"
+    (click)="salvataggio(nome, cognome); $event.preventDefault()"
+    [disabled]="isDisabled"
+  >
+    Inserimento
+  </button>
+</form>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>nome</mat-label>
+    <input
+      matInput
+      placeholder="E. andrea. Pizza"
+      [(ngModel)]="nomeRicerca"
+      name="nomeRicerca"
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>cognome</mat-label>
+    <input
+      matInput
+      placeholder="E. monico"
+      [(ngModel)]="cognomeRicerca"
+      name="cognomeRicerca"
+    />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    class="botton1"
+    (click)="ricerca(nomeRicerca, cognomeRicerca); $event.preventDefault()"
+  >
+    Ricerca
+  </button>
+</form>
